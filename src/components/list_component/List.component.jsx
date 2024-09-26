@@ -1,5 +1,16 @@
 import React from 'react';
 
-export default function List() {
-  return <>hihi</>;
+export default function List({ listItem, removeListItem }) {
+  return (
+    <li className="list-item">
+      <p className="text">{listItem.text}</p>
+      <button
+        type="button"
+        className="remove-button"
+        onClick={() => removeListItem(listItem.id)}
+      >
+        X
+      </button>
+    </li>
+  );
 }
