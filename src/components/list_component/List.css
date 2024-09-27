@@ -4,6 +4,7 @@
   align-items: center;
   margin-bottom: 1rem;
   font-weight: 400;
+  color: #bfa181;
 }
 
 .text {
@@ -16,10 +17,12 @@
   padding: 4px;
   display: flex;
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px solid #ff6900;
+  background: #ff6900;
 }
 
 .remove-button span {
   font-size: 1rem;
   align-items: center;
+  color: #efefef;
 }
