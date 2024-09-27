@@ -1,5 +1,14 @@
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 100;
+}
 .App {
   text-align: center;
 }
 
-
+.main-title {
+  font-weight: 900;
+}
+.list {
+  padding-left: 0;
+}

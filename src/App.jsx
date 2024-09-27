@@ -1,12 +1,17 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Form from './components/form_component/Form.component';
 import List from './components/list_component/List.component';
 
 function App() {
-  const [list, setList] = useState([]);
-  console.log({ list });
+  const [list, setList] = useState(() => {
+    const savedList = JSON.parse(localStorage.getItem('shoppingList'));
+    return savedList || [];
+  });
 
+  useEffect(() => {
+    localStorage.setItem('shoppingList', JSON.stringify(list));
+  });
   const addListItem = (item) => {
     setList((prev) => [item, ...prev]);
   };
@@ -17,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Shopping List</h1>
+      <h1 className="main-title">SHOPPING LIST</h1>
       <main>
         <Form addListItem={addListItem} />
         <ul className="list">
