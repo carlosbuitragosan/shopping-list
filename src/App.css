@@ -20,3 +20,9 @@ body {
   margin: 0 auto;
   margin-top: 2rem;
 }
+
+@media screen and (min-width: 780px) {
+  .list {
+    max-width: 40vw;
+  }
+}
