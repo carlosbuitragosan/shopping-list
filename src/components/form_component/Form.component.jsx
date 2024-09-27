@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import generateId from '../Utils/generate_id';
+import './Form.css';
 
 export default function Form({ addListItem }) {
   const [text, setText] = useState('');
@@ -21,12 +22,15 @@ export default function Form({ addListItem }) {
   return (
     <form name="form" className="form" onSubmit={handleSubmit}>
       <input
+        className="input"
         type="text"
         placeholder="Add an item"
         value={text}
         onChange={handleChange}
       />
-      <button type="submit">+</button>
+      <button type="submit" className="input-button">
+        <span className="material-symbols-outlined">add</span>
+      </button>
     </form>
   );
 }

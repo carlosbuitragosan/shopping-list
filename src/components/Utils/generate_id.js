@@ -1,5 +1,3 @@
-let id = 0;
-
-const generateId = () => id++;
+const generateId = () => Date.now();
 
 export default generateId;

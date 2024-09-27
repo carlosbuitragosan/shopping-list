@@ -10,7 +10,7 @@ export default function List({ listItem, removeListItem }) {
         className="remove-button"
         onClick={() => removeListItem(listItem.id)}
       >
-        X
+        <span className="material-symbols-outlined">close</span>
       </button>
     </li>
   );

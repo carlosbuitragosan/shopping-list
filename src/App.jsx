@@ -11,9 +11,16 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('shoppingList', JSON.stringify(list));
-  });
+  }, [list]);
+
   const addListItem = (item) => {
-    setList((prev) => [item, ...prev]);
+    setList((prev) =>
+      prev.find(
+        (prevItem) => prevItem.text.toLowerCase() === item.text.toLowerCase(),
+      )
+        ? prev
+        : [item, ...prev],
+    );
   };
 
   const removeListItem = (itemId) => {
