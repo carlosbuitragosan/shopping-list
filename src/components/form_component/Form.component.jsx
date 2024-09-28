@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import generateId from '../Utils/generate_id';
+import generateId from '../../Utils/generate_id';
 import './Form.css';
 
 export default function Form({ addListItem }) {
